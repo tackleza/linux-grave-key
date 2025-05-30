@@ -26,7 +26,7 @@
 1. **โคลนรีโพซิทอรี (repository)**
 
    ```bash
-   git clone https://github.com/yourusername/grave-key-switcher.git
+   git clone https://github.com/tackleza/linux-grave-key.git
    cd grave-key-switcher
    ```
 2. **รันสคริปต์ติดตั้ง**
@@ -55,8 +55,6 @@
 
 # Grave Key Layout Switcher
 
-**For English readers, please scroll down for the English version.**
-
 A simple script to install a custom XKB option that uses the grave/backquote key (\`) to toggle between English (US) and Thai keyboard layouts under X11 (and compatible with Wayland via libxkbcommon).
 
 ## Features
@@ -79,7 +77,7 @@ A simple script to install a custom XKB option that uses the grave/backquote key
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/grave-key-switcher.git
+   git clone https://github.com/tackleza/linux-grave-key.git
    cd grave-key-switcher
    ```
 2. **Run the install script**

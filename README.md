@@ -1,6 +1,8 @@
 # สวิตช์เลย์เอาต์ด้วยปุ่ม Grave
 
-**สำหรับผู้อ่านภาษาอังกฤษ โปรดเลื่อนลงไปเพื่อดูเวอร์ชันภาษาอังกฤษ**
+![Screenshot Image](https://raw.githubusercontent.com/tackleza/linux-grave-key/refs/heads/master/pic/screenshot.png)
+
+**For English readers, please scroll down**
 
 สคริปต์นี้ใช้สำหรับสลับระหว่างแป้นพิมพ์ภาษาอังกฤษ (US) และภาษาไทย โดยใช้ปุ่ม grave/backquote (\`)
 

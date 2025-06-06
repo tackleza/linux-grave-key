@@ -52,6 +52,7 @@
 ## ปัญหาที่ทราบ
 
 * ในเซสชัน Wayland การกดปุ่ม grave จะสลับได้เพียงครั้งเดียว (จาก English → Thai) และจะไม่สลับกลับไปเป็น English ในการกดครั้งที่สอง แต่บน X11 จะสลับสองทิศทางได้ตามปกติ
+* https://forum.manjaro.org/t/grave-backquote-key-only-toggles-layout-one-way-under-wayland-stop-working-since-25-0-3/178670?u=tacklezaza
 
 ---
 
@@ -105,3 +106,4 @@ No stray backticks will be emitted into your applications—each press cleanly s
 ## Known Issue
 
 * Under Wayland sessions, the grave key toggles only once (English → Thai) and does not toggle back to English on the second press. On X11 the toggle works bidirectionally as expected.
+* https://forum.manjaro.org/t/grave-backquote-key-only-toggles-layout-one-way-under-wayland-stop-working-since-25-0-3/178670?u=tacklezaza

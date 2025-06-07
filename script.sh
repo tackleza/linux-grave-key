@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
+
 # install_grave_key.sh — Install custom XKB rules, symbols, and xkb files
 # Must be run with root privileges
-set -euo pipefail
+
+# not sure if this does anything particularly useful
+set -eo pipefail
 
 # Ensure script is run as root
-if [[ $EUID -ne 0 ]]; then
+# check $EUID exists to replace -u in the set command above
+# but it probably isn't needed
+if [[ -z $EUID || $EUID -ne 0 ]]; then
   echo "This script must be run as root. Use sudo or run as root."
   exit 1
 fi
@@ -14,13 +19,11 @@ RULES_DIR="/usr/share/X11/xkb/rules"
 SYMBOLS_DIR="/usr/share/X11/xkb/symbols"
 
 # if we only want wayland then there's a better way
-# which won't be overitten by an update to xkeyboard-config
-
-#Comment this out first. fix this later. if run script without args. then error
-#if [[ "$1" == "wayland" ]]; then
-#  RULES_DIR="/etc/xkb/rules"
-#  SYMBOLS_DIR="/etc/xkb/symbols"
-#fi
+# which won't be overwritten by an update to xkeyboard-config
+if [[ "$1" == "wayland" ]]; then
+  RULES_DIR="/etc/xkb/rules"
+  SYMBOLS_DIR="/etc/xkb/symbols"
+fi
 
 # Ensure target directories exist, create if missing
 if [[ ! -d "$RULES_DIR" ]]; then

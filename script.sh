@@ -15,10 +15,12 @@ SYMBOLS_DIR="/usr/share/X11/xkb/symbols"
 
 # if we only want wayland then there's a better way
 # which won't be overitten by an update to xkeyboard-config
-if [[ "$1" == "wayland" ]]; then
-  RULES_DIR="/etc/xkb/rules"
-  SYMBOLS_DIR="/etc/xkb/symbols"
-fi
+
+#Comment this out first. fix this later. if run script without args. then error
+#if [[ "$1" == "wayland" ]]; then
+#  RULES_DIR="/etc/xkb/rules"
+#  SYMBOLS_DIR="/etc/xkb/symbols"
+#fi
 
 # Ensure target directories exist, create if missing
 if [[ ! -d "$RULES_DIR" ]]; then

@@ -4,7 +4,7 @@
 
 ![Screenshot Image](https://raw.githubusercontent.com/tackleza/linux-grave-key/refs/heads/master/pic/screenshot.png)
 
-สคริปต์นี้ใช้สำหรับสลับระหว่างแป้นพิมพ์ภาษาอังกฤษ (US) และภาษาไทย โดยใช้ปุ่ม grave/backquote (\`)
+สคริปต์นี้ใช้สำหรับสลับระหว่างแป้นพิมพ์ภาษาอังกฤษ และภาษาไทย (และภาษาอื่นๆ) โดยใช้ปุ่ม grave/backquote (\`)
 
 ## คุณสมบัติ
 
@@ -13,7 +13,6 @@
 
   * `rules/` → `/usr/share/X11/xkb/rules/`
   * `symbols/` → `/usr/share/X11/xkb/symbols/`
-  * `xkb/`     → `/etc/X11/xkb/`
 * ทำงานได้ทั้งบน X11 และ Wayland ผ่าน libxkbcommon
 
 ## ความต้องการเบื้องต้น
@@ -27,7 +26,7 @@
 
    ```bash
    git clone https://github.com/tackleza/linux-grave-key.git
-   cd grave-key-switcher
+   cd linux-grave-key
    ```
    หรือดาวน์โหลดรีโพซิทอรีเป็นไฟล์ ZIP: [ดาวน์โหลด ZIP](https://github.com/tackleza/linux-grave-key/archive/refs/heads/master.zip)
    
@@ -42,23 +41,14 @@
 
 ## การใช้งาน
 
-กดปุ่ม grave/backquote (\`) เพื่อสลับระหว่าง:
+เมื่อการติดตั้งเสร็จสิ้น โปรด Logout หรือ Reboot เครื่อง, หลังจากนั้นจะสามารถใช้ grave/backquote (\`) เพื่อสลับภาษาได้
 
-* **English (US)**
-* **Thai**
-
-ไม่มีการพิมพ์เครื่องหมาย backtick ในแอปพลิเคชัน ทุกครั้งที่กดจะสลับภาษาทันที
-
-## ปัญหาที่ทราบ
-
-* ในเซสชัน Wayland การกดปุ่ม grave จะสลับได้เพียงครั้งเดียว (จาก English → Thai) และจะไม่สลับกลับไปเป็น English ในการกดครั้งที่สอง แต่บน X11 จะสลับสองทิศทางได้ตามปกติ
-* https://forum.manjaro.org/t/grave-backquote-key-only-toggles-layout-one-way-under-wayland-stop-working-since-25-0-3/178670?u=tacklezaza
 
 ---
 
 # Grave Key Layout Switcher
 
-A simple script to install a custom XKB option that uses the grave/backquote key (\`) to toggle between English (US) and Thai keyboard layouts under X11 (and compatible with Wayland via libxkbcommon).
+A simple script to install a custom XKB option that uses the grave/backquote key (\`) to toggle keyboard layouts under X11 (and compatible with Wayland via libxkbcommon).
 
 ## Features
 
@@ -67,7 +57,6 @@ A simple script to install a custom XKB option that uses the grave/backquote key
 
   * `rules/` → `/usr/share/X11/xkb/rules/`
   * `symbols/` → `/usr/share/X11/xkb/symbols/`
-  * `xkb/`     → `/etc/X11/xkb/`
 * Works out-of-the-box on X11 and is honored by Wayland compositors via libxkbcommon
 
 ## Prerequisites
@@ -81,7 +70,7 @@ A simple script to install a custom XKB option that uses the grave/backquote key
 
    ```bash
    git clone https://github.com/tackleza/linux-grave-key.git
-   cd grave-key-switcher
+   cd linux-grave-key
    ```
    Or download the repository as a ZIP: [Download ZIP](https://github.com/tackleza/linux-grave-key/archive/refs/heads/master.zip)
    
@@ -96,14 +85,4 @@ A simple script to install a custom XKB option that uses the grave/backquote key
 
 ## Usage
 
-After installation and restarting your session, press the grave/backquote key (\`) to toggle between:
-
-* **English (US)**
-* **Thai**
-
-No stray backticks will be emitted into your applications—each press cleanly switches your layout.
-
-## Known Issue
-
-* Under Wayland sessions, the grave key toggles only once (English → Thai) and does not toggle back to English on the second press. On X11 the toggle works bidirectionally as expected.
-* https://forum.manjaro.org/t/grave-backquote-key-only-toggles-layout-one-way-under-wayland-stop-working-since-25-0-3/178670?u=tacklezaza
+After installation and restarting your session, now you can use grave/backquote key (\`) for switch the keyboard layout

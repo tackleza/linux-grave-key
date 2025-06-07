@@ -12,7 +12,13 @@ fi
 # Directories to copy into
 RULES_DIR="/usr/share/X11/xkb/rules"
 SYMBOLS_DIR="/usr/share/X11/xkb/symbols"
-XKB_DIR="/etc/X11/xkb"
+
+# if we only want wayland then there's a better way
+# which won't be overitten by an update to xkeyboard-config
+if [[ "$1" == "wayland" ]]; then
+  RULES_DIR="/etc/xkb/rules"
+  SYMBOLS_DIR="/etc/xkb/symbols"
+fi
 
 # Ensure target directories exist, create if missing
 if [[ ! -d "$RULES_DIR" ]]; then
@@ -23,19 +29,12 @@ if [[ ! -d "$SYMBOLS_DIR" ]]; then
   echo "Creating $SYMBOLS_DIR..."
   mkdir -p "$SYMBOLS_DIR"
 fi
-if [[ ! -d "$XKB_DIR" ]]; then
-  echo "Creating $XKB_DIR..."
-  mkdir -p "$XKB_DIR"
-fi
 
 # Copy files
 echo "Copying rules..."
-cp -rf ./rules/* "$RULES_DIR/"
+cp -f ./rules/* "$RULES_DIR/"
 
 echo "Copying symbols..."
-cp -rf ./symbols/* "$SYMBOLS_DIR/"
-
-echo "Copying xkb files..."
-cp -rf ./xkb/* "$XKB_DIR/"
+cp -f ./symbols/* "$SYMBOLS_DIR/"
 
 echo "Installation complete"

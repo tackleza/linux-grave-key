@@ -6912,7 +6912,7 @@
         <name>grp</name>
         <description>Switching to another layout</description>
       </configItem>
-      <option>
+     <option>
         <configItem>
           <name>grp:grave_switch</name>
           <description>Grave switches layout.</description>

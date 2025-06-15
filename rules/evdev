@@ -479,7 +479,7 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle)
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle)
   *		grp:shifts_toggle			= +group(shifts_toggle)
-  *             grp:grave_switch        =       +group(grave_switch)
+  *		grp:grave_switch			= +group(grave_switch)
   $azerty	caps:digits_row				= +capslock(digits_row)
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock)
 
@@ -495,7 +495,7 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle):1
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle):1
   *		grp:shifts_toggle			= +group(shifts_toggle):1
-  *             grp:grave_switch        =       +group(grave_switch)
+  *		grp:grave_switch			= +group(grave_switch)
   $azerty	caps:digits_row				= +capslock(digits_row):1
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock):1
 
@@ -511,7 +511,7 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle):2
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle):2
   *		grp:shifts_toggle			= +group(shifts_toggle):2
-  *             grp:grave_switch        =       +group(grave_switch)
+  *		grp:grave_switch			= +group(grave_switch)
   $azerty	caps:digits_row				= +capslock(digits_row):2
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock):2
 
@@ -527,7 +527,7 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle):3
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle):3
   *		grp:shifts_toggle			= +group(shifts_toggle):3
-  *             grp:grave_switch        =       +group(grave_switch)
+  *		grp:grave_switch			= +group(grave_switch)
   $azerty	caps:digits_row				= +capslock(digits_row):3
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock):3
 
@@ -543,7 +543,7 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle):4
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle):4
   *		grp:shifts_toggle			= +group(shifts_toggle):4
-  *             grp:grave_switch        =       +group(grave_switch)
+  *		grp:grave_switch			= +group(grave_switch)
   $azerty	caps:digits_row				= +capslock(digits_row):4
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock):4
 
@@ -644,7 +644,7 @@
   grp:ctrl_shift_toggle          = +group(ctrl_shift_toggle)
   grp:ctrl_shift_toggle_bidir    = +group(ctrl_shift_toggle_bidir)
   grp:ctrls_toggle               = +group(ctrls_toggle)
-  grp:grave_switch                = +group(grave_switch)
+  grp:grave_switch               = +group(grave_switch)
   grp:lalt_lshift_toggle         = +group(lalt_lshift_toggle)
   grp:lalt_toggle                = +group(lalt_toggle)
   grp:lctrl_lalt_toggle          = +group(lctrl_lalt_toggle)

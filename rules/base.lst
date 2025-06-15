@@ -608,7 +608,6 @@
   scn             it: Sicilian
   geo             it: Georgian (Italy)
   kana            jp: Japanese (Kana)
-  kana86          jp: Japanese (Kana 86)
   OADG109A        jp: Japanese (OADG 109A)
   mac             jp: Japanese (Macintosh)
   dvorak          jp: Japanese (Dvorak)
@@ -743,6 +742,7 @@
   dvorak          se: Swedish (Dvorak)
   us_dvorak       se: Swedish (Dvorak, intl.)
   svdvorak        se: Swedish (Svdvorak)
+  colemak         se: Swedish (Colemak)
   mac             se: Swedish (Macintosh)
   us              se: Swedish (US)
   swl             se: Swedish Sign Language
@@ -780,7 +780,6 @@
 
 ! option
   grp                  Switching to another layout
-  grp:grave_switch     Grave switches layout.
   grp:switch           Right Alt (while pressed)
   grp:lswitch          Left Alt (while pressed)
   grp:lwin_switch      Left Win (while pressed)
@@ -801,6 +800,7 @@
   grp:alts_toggle      Both Alts together
   grp:alt_altgr_toggle Both Alts together; AltGr alone chooses third level
   grp:ctrls_toggle     Both Ctrls together
+  grp:grave_switch     Grave switches layout.
   grp:ctrl_shift_toggle Ctrl+Shift
   grp:lctrl_lshift_toggle Left Ctrl+Left Shift
   grp:rctrl_rshift_toggle Right Ctrl+Right Shift
@@ -949,6 +949,8 @@
   numpad:mac           Numeric keypad always enters digits (as in macOS)
   numpad:microsoft     Num Lock on: digits; Shift for arrows. Num Lock off: arrows (as in Windows)
   numpad:shift3        Shift does not cancel Num Lock, chooses 3rd level instead
+  hyper:mod3           Map Hyper to Mod3 (conflict with LevelFive)
+  hyper:mod4           Map Hyper to Mod4 (conflict with Super)
   scrolllock:mod3      Map Scroll Lock to Mod3
   srvrkeys:none        Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server
   apple:alupckeys      Apple Aluminium emulates Pause, PrtSc, Scroll Lock

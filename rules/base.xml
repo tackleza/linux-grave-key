@@ -4958,12 +4958,6 @@
         </variant>
         <variant>
           <configItem>
-            <name>kana86</name>
-            <description>Japanese (Kana 86)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
             <name>OADG109A</name>
             <description>Japanese (OADG 109A)</description>
           </configItem>
@@ -6434,6 +6428,12 @@
         </variant>
         <variant>
           <configItem>
+            <name>colemak</name>
+            <description>Swedish (Colemak)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>mac</name>
             <description>Swedish (Macintosh)</description>
           </configItem>
@@ -6912,7 +6912,7 @@
         <name>grp</name>
         <description>Switching to another layout</description>
       </configItem>
-     <option>
+      <option>
         <configItem>
           <name>grp:grave_switch</name>
           <description>Grave switches layout.</description>
@@ -7941,6 +7941,18 @@
         <configItem>
           <name>numpad:shift3</name>
           <description>Shift does not cancel Num Lock, chooses 3rd level instead</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>hyper:mod3</name>
+          <description>Map Hyper to Mod3 (conflict with LevelFive)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>hyper:mod4</name>
+          <description>Map Hyper to Mod4 (conflict with Super)</description>
         </configItem>
       </option>
       <option>

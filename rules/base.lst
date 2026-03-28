@@ -421,7 +421,8 @@
   intl            us: English (US, intl., with dead keys)
   alt-intl        us: English (US, alt. intl.)
   altgr-intl      us: English (intl., with AltGr dead keys)
-  mac             us: English (Macintosh)
+  mac             us: English (Macintosh, ABC, ANSI)
+  mac-iso         us: English (Macintosh, ABC, ISO)
   colemak         us: English (Colemak)
   colemak_dh      us: English (Colemak-DH)
   colemak_dh_wide us: English (Colemak-DH Wide)
@@ -435,7 +436,8 @@
   dvorak-r        us: English (Dvorak, one-handed, right)
   dvorak-classic  us: English (classic Dvorak)
   dvp             us: English (programmer Dvorak)
-  dvorak-mac      us: English (Dvorak, Macintosh)
+  dvorak-mac      us: English (Dvorak, Macintosh, ANSI)
+  dvorak-mac-iso  us: English (Dvorak, Macintosh, ISO)
   norman          us: English (Norman)
   symbolic        us: English (US, Symbolic)
   workman         us: English (Workman)
@@ -608,7 +610,6 @@
   scn             it: Sicilian
   geo             it: Georgian (Italy)
   kana            jp: Japanese (Kana)
-  kana86          jp: Japanese (Kana 86)
   OADG109A        jp: Japanese (OADG 109A)
   mac             jp: Japanese (Macintosh)
   dvorak          jp: Japanese (Dvorak)
@@ -743,6 +744,7 @@
   dvorak          se: Swedish (Dvorak)
   us_dvorak       se: Swedish (Dvorak, intl.)
   svdvorak        se: Swedish (Svdvorak)
+  colemak         se: Swedish (Colemak)
   mac             se: Swedish (Macintosh)
   us              se: Swedish (US)
   swl             se: Swedish Sign Language
@@ -753,6 +755,7 @@
   legacy          tj: Tajik (legacy)
   tis             th: Thai (TIS-820.2538)
   pat             th: Thai (Pattachote)
+  mnc             th: Thai (Manoonchai)
   alt             tm: Turkmen (Alt-Q)
   f               tr: Turkish (F)
   e               tr: Turkish (E)
@@ -764,6 +767,7 @@
   phonetic        ua: Ukrainian (phonetic)
   typewriter      ua: Ukrainian (typewriter)
   winkeys         ua: Ukrainian (Windows)
+  winkeysenhanced ua: Ukrainian (Windows Enhanced)
   macOS           ua: Ukrainian (macOS)
   legacy          ua: Ukrainian (legacy)
   homophonic      ua: Ukrainian (homophonic)
@@ -772,6 +776,7 @@
   crh_alt         ua: Crimean Tatar (Turkish Alt-Q)
   urd-crulp       pk: Urdu (Pakistan, CRULP)
   urd-nla         pk: Urdu (Pakistan, NLA)
+  pak_urdu_phonetic pk: Urdu (Pak Urdu Phonetic)
   ara             pk: Arabic (Pakistan)
   snd             pk: Sindhi
   latin           uz: Uzbek (Latin)
@@ -780,7 +785,6 @@
 
 ! option
   grp                  Switching to another layout
-  grp:grave_switch     Grave switches layout.
   grp:switch           Right Alt (while pressed)
   grp:lswitch          Left Alt (while pressed)
   grp:lwin_switch      Left Win (while pressed)
@@ -790,6 +794,7 @@
   grp:caps_switch      Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action
   grp:rctrl_switch     Right Ctrl (while pressed)
   grp:toggle           Right Alt
+  grp:grave_switch   Grave switches layout.
   grp:lalt_toggle      Left Alt
   grp:caps_toggle      Caps Lock
   grp:shift_caps_toggle Shift+Caps Lock
@@ -949,6 +954,9 @@
   numpad:mac           Numeric keypad always enters digits (as in macOS)
   numpad:microsoft     Num Lock on: digits; Shift for arrows. Num Lock off: arrows (as in Windows)
   numpad:shift3        Shift does not cancel Num Lock, chooses 3rd level instead
+  hyper:mod2           Map Hyper to Mod2 (conflict with NumLock)
+  hyper:mod3           Map Hyper to Mod3 (conflict with LevelFive)
+  hyper:mod4           Map Hyper to Mod4 (conflict with Super)
   scrolllock:mod3      Map Scroll Lock to Mod3
   srvrkeys:none        Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server
   apple:alupckeys      Apple Aluminium emulates Pause, PrtSc, Scroll Lock

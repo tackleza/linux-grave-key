@@ -137,6 +137,7 @@
   $applealu	de		$mac_de_variants	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l%(v)
   $applealu	dk		$mac_dk_variants	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l%(v)
   $applealu	fi		nodeadkeys	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l%(v)
+  $applealu	fr		nodeadkeys	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l%(v)
   $applealu	is		nodeadkeys	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l%(v)
   $applealu	jp		mac	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l%(v)
   $applealu	no		nodeadkeys	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l%(v)
@@ -173,6 +174,7 @@
   pc98		*			=	nec_vndr/jp(pc98)+%l%(v)
   applealu_jis	jp			=	macintosh_vndr/apple(alukbd)+macintosh_vndr/jp(usmac)+macintosh_vndr/jp(mac):2
   applealu_jis	*			=	macintosh_vndr/apple(alukbd)+%l%(v)+macintosh_vndr/jp(mac):2
+  applealu_iso	us			=	macintosh_vndr/apple(alukbd)+macintosh_vndr/us(applealu_iso)
  $applealu	$macvendorlayouts	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l
  $applealu	*			=	macintosh_vndr/apple(alukbd)+%l%(v)
   olpc		$olpclayouts		=	olpc+%l%(m)
@@ -207,6 +209,7 @@
   $applealu	de		$mac_de_variants	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l[1]%(v[1])
   $applealu	dk		$mac_dk_variants	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l[1]%(v[1])
   $applealu	fi		nodeadkeys	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l[1]%(v[1])
+  $applealu	fr		nodeadkeys	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l[1]%(v[1])
   $applealu	is		nodeadkeys	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l[1]%(v[1])
   $applealu	jp		mac	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l[1]%(v[1])
   $applealu	no		nodeadkeys	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l[1]%(v[1])
@@ -235,6 +238,7 @@
   jollasbj	*			=	jolla_vndr/sbj(common)+%l[1]%(v[1])
  $sun		$sun_custom		=	pc+sun_vndr/%l[1]
   applealu_jis	us			=	macintosh_vndr/apple(alukbd)+macintosh_vndr/jp(usmac)
+  applealu_iso	us			=	macintosh_vndr/apple(alukbd)+macintosh_vndr/us(applealu_iso)
  $applealu	$macvendorlayouts	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l[1]
  $applealu	*			=	macintosh_vndr/apple(alukbd)+%l[1]%(v[1])
  $thinkpads	br			=	pc+%l[1](thinkpad)
@@ -254,6 +258,7 @@
   *		tel			=	+in(tel):2
   *		tml			=	+in(tam):2
   *		us_intl			=	+us(alt-intl):2
+  applealu_iso	us			=	+macintosh_vndr/us(applealu_iso):2
  $applealu	$macvendorlayouts	=	+macintosh_vndr/%l[2]:2
  $sun		$sun_custom	=	+sun_vndr/%l[2]:2
   *		*		=	+%l[2]%(v[2]):2
@@ -272,6 +277,7 @@
   *		tel			=	+in(tel):3
   *		tml			=	+in(tam):3
   *		us_intl			=	+us(alt-intl):3
+  applealu_iso	us			=	+macintosh_vndr/us(applealu_iso):3
  $applealu	$macvendorlayouts	=	+macintosh_vndr/%l[3]:3
  $sun		$sun_custom	=	+sun_vndr/%l[3]:3
   *		*		=	+%l[3]%(v[3]):3
@@ -290,8 +296,9 @@
   *		tel			=	+in(tel):4
   *		tml			=	+in(tam):4
   *		us_intl			=	+us(alt-intl):4
+  applealu_iso	us			=	+macintosh_vndr/us(applealu_iso):4
  $applealu	$macvendorlayouts	=	+macintosh_vndr/%l[4]:4
- $sun		$sun_custom	=	+sun_vndr/%l[4]%(v[4]):4
+ $sun		$sun_custom	=	+sun_vndr/%l[4]:4
   *		*		=	+%l[4]%(v[4]):4
 
 ! model		layout[2]		variant[2]	=	symbols
@@ -313,6 +320,7 @@
   $applealu	de		$mac_de_variants	=	+macintosh_vndr/%l[2]%(v[2]):2
   $applealu	dk		$mac_dk_variants	=	+macintosh_vndr/%l[2]%(v[2]):2
   $applealu	fi		nodeadkeys	=	+macintosh_vndr/%l[2]%(v[2]):2
+  $applealu	fr		nodeadkeys	=	+macintosh_vndr/%l[2]%(v[2]):2
   $applealu	is		nodeadkeys	=	+macintosh_vndr/%l[2]%(v[2]):2
   $applealu	jp		mac	=	+macintosh_vndr/%l[2]%(v[2]):2
   $applealu	no		nodeadkeys	=	+macintosh_vndr/%l[2]%(v[2]):2
@@ -341,6 +349,7 @@
   $applealu	de		$mac_de_variants	=	+macintosh_vndr/%l[3]%(v[3]):3
   $applealu	dk		$mac_dk_variants	=	+macintosh_vndr/%l[3]%(v[3]):3
   $applealu	fi		nodeadkeys	=	+macintosh_vndr/%l[3]%(v[3]):3
+  $applealu	fr		nodeadkeys	=	+macintosh_vndr/%l[3]%(v[3]):3
   $applealu	is		nodeadkeys	=	+macintosh_vndr/%l[3]%(v[3]):3
   $applealu	jp		mac	=	+macintosh_vndr/%l[3]%(v[3]):3
   $applealu	no		nodeadkeys	=	+macintosh_vndr/%l[3]%(v[3]):3
@@ -369,6 +378,7 @@
   $applealu	de		$mac_de_variants	=	+macintosh_vndr/%l[4]%(v[4]):4
   $applealu	dk		$mac_dk_variants	=	+macintosh_vndr/%l[4]%(v[4]):4
   $applealu	fi		nodeadkeys	=	+macintosh_vndr/%l[4]%(v[4]):4
+  $applealu	fr		nodeadkeys	=	+macintosh_vndr/%l[4]%(v[4]):4
   $applealu	is		nodeadkeys	=	+macintosh_vndr/%l[4]%(v[4]):4
   $applealu	jp		mac	=	+macintosh_vndr/%l[4]%(v[4]):4
   $applealu	no		nodeadkeys	=	+macintosh_vndr/%l[4]%(v[4]):4
@@ -411,7 +421,7 @@
   de		 bone_eszett_home	= +caps(caps_lock):2+misc(assign_shift_left_action):2+level5(level5_lock):2
   de		 neo_qwertz		= +caps(caps_lock):2+misc(assign_shift_left_action):2+level5(level5_lock):2
   de		 neo_qwerty		= +caps(caps_lock):2+misc(assign_shift_left_action):2+level5(level5_lock):2
-  jp		$sun_compat		= +complete+japan(kana_lock):2
+  jp		$sun_compat		= +japan(kana_lock):2
 
 ! layout[3]	 variant[3]		= compat
   de		 neo			= +caps(caps_lock):3+misc(assign_shift_left_action):3+level5(level5_lock):3
@@ -421,7 +431,7 @@
   de		 bone_eszett_home	= +caps(caps_lock):3+misc(assign_shift_left_action):3+level5(level5_lock):3
   de		 neo_qwertz		= +caps(caps_lock):3+misc(assign_shift_left_action):3+level5(level5_lock):3
   de		 neo_qwerty		= +caps(caps_lock):3+misc(assign_shift_left_action):3+level5(level5_lock):3
-  jp		$sun_compat		= +complete+japan(kana_lock):3
+  jp		$sun_compat		= +japan(kana_lock):3
 
 ! layout[4]	 variant[4]		= compat
   de		 neo			= +caps(caps_lock):4+misc(assign_shift_left_action):4+level5(level5_lock):4
@@ -431,7 +441,7 @@
   de		 bone_eszett_home	= +caps(caps_lock):4+misc(assign_shift_left_action):4+level5(level5_lock):4
   de		 neo_qwertz		= +caps(caps_lock):4+misc(assign_shift_left_action):4+level5(level5_lock):4
   de		 neo_qwerty		= +caps(caps_lock):4+misc(assign_shift_left_action):4+level5(level5_lock):4
-  jp		$sun_compat		= +complete+japan(kana_lock):4
+  jp		$sun_compat		= +japan(kana_lock):4
 
 ! model		layout		=	compat
   pc98		jp		=	pc98(basic)
@@ -441,7 +451,17 @@
   *		*		=	complete
 
 ! model		layout[1]	=	compat
+  *		jp		=	complete+japan
   *		*		=	complete
+
+! model		layout[2]	=	compat
+  *		jp		=	+japan
+
+! model		layout[3]	=	compat
+  *		jp		=	+japan
+
+! model		layout[4]	=	compat
+  *		jp		=	+japan
 
 ! model		=	types
   $applealu	=	complete+numpad(mac)
@@ -452,6 +472,7 @@
   *		misc:typo				= +typo(base)
   *		lv3:ralt_alt				= +level3(ralt_alt)
   *		grp:toggle				= +group(toggle)
+  *		grp:grave_switch				= +group(grave_switch)
   *		grp:alts_toggle				= +group(alts_toggle)
   *		grp:alt_altgr_toggle			= +group(alt_altgr_toggle)
   *		grp:alt_space_toggle			= +group(alt_space_toggle)
@@ -459,7 +480,6 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle)
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle)
   *		grp:shifts_toggle			= +group(shifts_toggle)
-  *             grp:grave_switch        =       +group(grave_switch)
   $azerty	caps:digits_row				= +capslock(digits_row)
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock)
 
@@ -468,6 +488,7 @@
   *		misc:typo				= +typo(base):1
   *		lv3:ralt_alt				= +level3(ralt_alt):1
   *		grp:toggle				= +group(toggle):1
+  *		grp:grave_switch				= +group(grave_switch)
   *		grp:alts_toggle				= +group(alts_toggle):1
   *		grp:alt_altgr_toggle			= +group(alt_altgr_toggle):1
   *		grp:alt_space_toggle			= +group(alt_space_toggle):1
@@ -475,7 +496,6 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle):1
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle):1
   *		grp:shifts_toggle			= +group(shifts_toggle):1
-  *             grp:grave_switch        =       +group(grave_switch):1
   $azerty	caps:digits_row				= +capslock(digits_row):1
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock):1
 
@@ -484,6 +504,7 @@
   *		misc:typo				= +typo(base):2
   *		lv3:ralt_alt				= +level3(ralt_alt):2
   *		grp:toggle				= +group(toggle):2
+  *		grp:grave_switch				= +group(grave_switch)
   *		grp:alts_toggle				= +group(alts_toggle):2
   *		grp:alt_altgr_toggle			= +group(alt_altgr_toggle):2
   *		grp:alt_space_toggle			= +group(alt_space_toggle):2
@@ -491,7 +512,6 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle):2
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle):2
   *		grp:shifts_toggle			= +group(shifts_toggle):2
-  *             grp:grave_switch        =       +group(grave_switch):2
   $azerty	caps:digits_row				= +capslock(digits_row):2
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock):2
 
@@ -500,6 +520,7 @@
   *		misc:typo				= +typo(base):3
   *		lv3:ralt_alt				= +level3(ralt_alt):3
   *		grp:toggle				= +group(toggle):3
+  *		grp:grave_switch				= +group(grave_switch)
   *		grp:alts_toggle				= +group(alts_toggle):3
   *		grp:alt_altgr_toggle			= +group(alt_altgr_toggle):3
   *		grp:alt_space_toggle			= +group(alt_space_toggle):3
@@ -507,7 +528,6 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle):3
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle):3
   *		grp:shifts_toggle			= +group(shifts_toggle):3
-  *             grp:grave_switch        =       +group(grave_switch):3
   $azerty	caps:digits_row				= +capslock(digits_row):3
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock):3
 
@@ -516,6 +536,7 @@
   *		misc:typo				= +typo(base):4
   *		lv3:ralt_alt				= +level3(ralt_alt):4
   *		grp:toggle				= +group(toggle):4
+  *		grp:grave_switch				= +group(grave_switch)
   *		grp:alts_toggle				= +group(alts_toggle):4
   *		grp:alt_altgr_toggle			= +group(alt_altgr_toggle):4
   *		grp:alt_space_toggle			= +group(alt_space_toggle):4
@@ -523,13 +544,10 @@
   *		grp:ctrl_space_toggle			= +group(ctrl_space_toggle):4
   *		grp:rctrl_rshift_toggle			= +group(rctrl_rshift_toggle):4
   *		grp:shifts_toggle			= +group(shifts_toggle):4
-  *             grp:grave_switch        =       +group(grave_switch):4
   $azerty	caps:digits_row				= +capslock(digits_row):4
   $azerty	caps:digits_row_independent_lock	= +capslock(digits_row_independent_lock):4
 
 ! option                         = symbols
-  grp:grave_switch        =       +group(grave_switch)
-  grp:shift_toggle	=	+group(shifts_toggle)
   grp:shift_caps_switch          = +group(caps_select)
   grp:win_menu_switch            = +group(win_menu_select)
   grp:lctrl_rctrl_switch         = +group(ctrl_select)
@@ -651,6 +669,9 @@
   grp:switch                     = +group(switch)
   grp:win_menu_select            = +group(win_menu_select)
   grp:win_switch                 = +group(win_switch)
+  hyper:mod2                     = +hyper(mod2)
+  hyper:mod3                     = +hyper(mod3)
+  hyper:mod4                     = +hyper(mod4)
   japan:hztg_escape              = +jp(hztg_escape)
   japan:nicola_f_bs              = +jp(nicola_f_bs)
   keypad:atm                     = +keypad(atm)

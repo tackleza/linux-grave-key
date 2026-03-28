@@ -3000,7 +3000,13 @@
         <variant>
           <configItem>
             <name>mac</name>
-            <description>English (Macintosh)</description>
+            <description>English (Macintosh, ABC, ANSI)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac-iso</name>
+            <description>English (Macintosh, ABC, ISO)</description>
           </configItem>
         </variant>
         <variant>
@@ -3084,7 +3090,13 @@
         <variant>
           <configItem>
             <name>dvorak-mac</name>
-            <description>English (Dvorak, Macintosh)</description>
+            <description>English (Dvorak, Macintosh, ANSI)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvorak-mac-iso</name>
+            <description>English (Dvorak, Macintosh, ISO)</description>
           </configItem>
         </variant>
         <variant>
@@ -4958,12 +4970,6 @@
         </variant>
         <variant>
           <configItem>
-            <name>kana86</name>
-            <description>Japanese (Kana 86)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
             <name>OADG109A</name>
             <description>Japanese (OADG 109A)</description>
           </configItem>
@@ -6434,6 +6440,12 @@
         </variant>
         <variant>
           <configItem>
+            <name>colemak</name>
+            <description>Swedish (Colemak)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>mac</name>
             <description>Swedish (Macintosh)</description>
           </configItem>
@@ -6573,6 +6585,12 @@
           <configItem>
             <name>pat</name>
             <description>Thai (Pattachote)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mnc</name>
+            <description>Thai (Manoonchai)</description>
           </configItem>
         </variant>
       </variantList>
@@ -6720,6 +6738,12 @@
         </variant>
         <variant>
           <configItem>
+            <name>winkeysenhanced</name>
+            <description>Ukrainian (Windows Enhanced)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>macOS</name>
             <description>Ukrainian (macOS)</description>
           </configItem>
@@ -6795,6 +6819,12 @@
           <configItem>
             <name>urd-nla</name>
             <description>Urdu (Pakistan, NLA)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>pak_urdu_phonetic</name>
+            <description>Urdu (Pak Urdu Phonetic)</description>
           </configItem>
         </variant>
         <variant>
@@ -6912,12 +6942,6 @@
         <name>grp</name>
         <description>Switching to another layout</description>
       </configItem>
-      <option>
-        <configItem>
-          <name>grp:grave_switch</name>
-          <description>Grave switches layout.</description>
-        </configItem>
-      </option>
       <option>
         <configItem>
           <name>grp:switch</name>
@@ -7941,6 +7965,24 @@
         <configItem>
           <name>numpad:shift3</name>
           <description>Shift does not cancel Num Lock, chooses 3rd level instead</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>hyper:mod2</name>
+          <description>Map Hyper to Mod2 (conflict with NumLock)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>hyper:mod3</name>
+          <description>Map Hyper to Mod3 (conflict with LevelFive)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>hyper:mod4</name>
+          <description>Map Hyper to Mod4 (conflict with Super)</description>
         </configItem>
       </option>
       <option>

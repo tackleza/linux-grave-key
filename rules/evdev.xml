@@ -172,6 +172,13 @@
       </configItem>
     </model>
     <model>
+        <configItem>
+            <name>blackberry-key2</name>
+            <description>BlackBerry KEY2</description>
+            <vendor>BlackBerry</vendor>
+        </configItem>
+    </model>
+    <model>
       <configItem>
         <name>brother</name>
         <description>Brother Internet</description>
@@ -2094,6 +2101,17 @@
             <description>Burmese (Zawgyi)</description>
             <languageList>
               <iso639Id>mya</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mara</name>
+            <!-- Keyboard indicator for Mara layouts -->
+            <shortDescription>mrh</shortDescription>
+            <description>Mara</description>
+            <languageList>
+              <iso639Id>mrh</iso639Id>
             </languageList>
           </configItem>
         </variant>
@@ -4514,6 +4532,17 @@
         </variant>
         <variant>
           <configItem>
+            <name>mara</name>
+            <!-- Keyboard indicator for Mara layouts -->
+            <shortDescription>mrh</shortDescription>
+            <description>Mara</description>
+            <languageList>
+              <iso639Id>mrh</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>mni</name>
             <description>Manipuri (Meitei)</description>
             <languageList>
@@ -5807,6 +5836,12 @@
           <configItem>
             <name>thinkpad</name>
             <description>Portuguese (Brazil, IBM/Lenovo ThinkPad)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>thinkpad_nodeadkeys</name>
+            <description>Portuguese (Brazil, IBM/Lenovo ThinkPad, no dead keys)</description>
           </configItem>
         </variant>
         <variant>
@@ -7989,6 +8024,36 @@
         <configItem>
           <name>hyper:mod4</name>
           <description>Map Hyper to Mod4 (conflict with Super)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>hyper:mod5</name>
+          <description>Map Hyper to Mod5 (conflict with LevelThree)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>meta:mod2</name>
+          <description>Map Meta to Mod2 (conflict with NumLock)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>meta:mod3</name>
+          <description>Map Meta to Mod3 (conflict with LevelFive)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>meta:mod4</name>
+          <description>Map Meta to Mod4 (conflict with Super)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>meta:mod5</name>
+          <description>Map Meta to Mod5 (conflict with LevelThree)</description>
         </configItem>
       </option>
       <option>

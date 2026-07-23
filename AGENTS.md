@@ -37,3 +37,50 @@ After changing the rules, compile at least a two-layout keymap (for example
 `us,th`) with `grp:grave_switch`. The resolved symbols must include
 `group(grave_switch):1` and `group(grave_switch):2`, and `<TLDE>` must resolve
 to `ISO_Next_Group` in both layout groups.
+
+## Refreshing from upstream
+
+The packaged rules currently come from the upstream `xkeyboard-config` master
+commit `f05f728327f30037567cb79725120a498cb0848b` (2026-07-10), seven commits
+after the `xkeyboard-config-2.48` release. The authoritative repository is:
+
+```text
+https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config.git
+```
+
+Modern upstream releases generate the installable rules from source templates.
+When importing a newer snapshot, apply the customization to these upstream
+source files before generating artifacts:
+
+- Add `grp:grave_switch = +group(grave_switch):%i` beside `grp:toggle` in
+  `rules/rules.in` under `! layout[any] option = symbols`.
+- Add the `grp:grave_switch` option metadata to the `grp` section of
+  `rules/base.xml`.
+- Add the `xkb_symbols "grave_switch"` definition to `symbols/group`.
+
+Generate both rule sets with compatibility mappings enabled:
+
+```bash
+PYTHONPATH=. python3 -m rules.generator rules --ruleset base \
+  --version v2 --compat --output /tmp/base rules/rules.in
+PYTHONPATH=. python3 -m rules.generator rules --ruleset evdev \
+  --version v2 --compat --output /tmp/evdev rules/rules.in
+perl rules/xml2lst.pl rules/base.xml > /tmp/base.lst
+```
+
+Copy `rules/base.xml` to both packaged XML files and generate both `.lst` files
+from that patched XML. Do not edit only the generated `base` and `evdev` files;
+the next upstream regeneration would discard the custom rule.
+
+## Installer behavior
+
+Keep `script.sh` usable without arguments. Its default `--auto` mode detects
+`XDG_SESSION_TYPE` first, then `WAYLAND_DISPLAY`, then `DISPLAY`. Because a
+Wayland session can also export `DISPLAY` for XWayland, never check `DISPLAY`
+before `WAYLAND_DISPLAY`.
+
+Wayland installs are per-user under `$XDG_CONFIG_HOME/xkb` with the standard
+fallback to `$HOME/.config/xkb`, and must not use sudo. X11 installs are
+system-wide under `/usr/share/X11/xkb`; when invoked as a regular user, the
+script must explicitly re-run itself with `sudo -- ... --x11`. The supported
+flags are `--auto`, `--wayland`, `--x11`, and `--help`.

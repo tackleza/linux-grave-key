@@ -4,20 +4,18 @@ xkb_symbols "switch" {
     key <RALT> {[  Mode_switch,  Multi_key  ]};
 };
 
-
-// using the group(grave_switch) for switches layout.
+// Pressing the grave key switches to the next group.
 partial modifier_keys
 xkb_symbols "grave_switch" {
     virtual_modifiers AltGr;
-    key <TLDE>  {
-    symbols[Group1]= [  ISO_Next_Group  ],
-    symbols[Group2]= [  ISO_Prev_Group  ],
-    symbols[Group3]= [  ISO_Next_Group  ],
-    symbols[Group4]= [  ISO_Next_Group  ],
-    virtualMods= AltGr
+    key <TLDE> {
+        symbols[Group1] = [ ISO_Next_Group ],
+        symbols[Group2] = [ ISO_Prev_Group ],
+        symbols[Group3] = [ ISO_Next_Group ],
+        symbols[Group4] = [ ISO_Next_Group ],
+        virtualMods = AltGr
     };
 };
-
 
 // The left Alt key (while pressed) chooses the next group.
 partial modifier_keys

@@ -23,6 +23,7 @@
   benqx730        BenQ X-Touch 730
   benqx800        BenQ X-Touch 800
   abnt2           Brazilian ABNT2
+  blackberry-key2 BlackBerry KEY2
   brother         Brother Internet
   btc5090         BTC 5090
   btc5113rf       BTC 5113RF Multimedia
@@ -349,6 +350,7 @@
   bas_phonetic    bg: Bulgarian (new phonetic)
   bekl            bg: Bulgarian (enhanced)
   zawgyi          mm: Burmese (Zawgyi)
+  mara            mm: Mara
   mnw             mm: Mon
   mnw-a1          mm: Mon (A1)
   shn             mm: Shan
@@ -570,6 +572,7 @@
   mal_lalitha     in: Malayalam (Lalitha)
   mal_enhanced    in: Malayalam (enhanced InScript, with rupee)
   mal_poorna      in: Malayalam (Poorna, extended InScript)
+  mara            in: Mara
   mni             in: Manipuri (Meitei)
   mar-kagapa      in: Marathi (KaGaPa, phonetic)
   marathi         in: Marathi (enhanced InScript)
@@ -684,6 +687,7 @@
   nativo          br: Portuguese (Brazil, Nativo)
   nativo-us       br: Portuguese (Brazil, Nativo for US keyboards)
   thinkpad        br: Portuguese (Brazil, IBM/Lenovo ThinkPad)
+  thinkpad_nodeadkeys br: Portuguese (Brazil, IBM/Lenovo ThinkPad, no dead keys)
   nativo-epo      br: Esperanto (Brazil, Nativo)
   rus             br: Russian (Brazil, phonetic)
   std             ro: Romanian (standard)
@@ -785,6 +789,7 @@
 
 ! option
   grp                  Switching to another layout
+  grp:grave_switch     Grave switches layout.
   grp:switch           Right Alt (while pressed)
   grp:lswitch          Left Alt (while pressed)
   grp:lwin_switch      Left Win (while pressed)
@@ -794,7 +799,6 @@
   grp:caps_switch      Caps Lock (while pressed), Alt+Caps Lock for the original Caps Lock action
   grp:rctrl_switch     Right Ctrl (while pressed)
   grp:toggle           Right Alt
-  grp:grave_switch   Grave switches layout.
   grp:lalt_toggle      Left Alt
   grp:caps_toggle      Caps Lock
   grp:shift_caps_toggle Shift+Caps Lock
@@ -957,6 +961,11 @@
   hyper:mod2           Map Hyper to Mod2 (conflict with NumLock)
   hyper:mod3           Map Hyper to Mod3 (conflict with LevelFive)
   hyper:mod4           Map Hyper to Mod4 (conflict with Super)
+  hyper:mod5           Map Hyper to Mod5 (conflict with LevelThree)
+  meta:mod2            Map Meta to Mod2 (conflict with NumLock)
+  meta:mod3            Map Meta to Mod3 (conflict with LevelFive)
+  meta:mod4            Map Meta to Mod4 (conflict with Super)
+  meta:mod5            Map Meta to Mod5 (conflict with LevelThree)
   scrolllock:mod3      Map Scroll Lock to Mod3
   srvrkeys:none        Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server
   apple:alupckeys      Apple Aluminium emulates Pause, PrtSc, Scroll Lock

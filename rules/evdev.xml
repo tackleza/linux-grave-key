@@ -6944,6 +6944,12 @@
       </configItem>
       <option>
         <configItem>
+          <name>grp:grave_switch</name>
+          <description>Grave switches layout.</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>grp:switch</name>
           <description>Right Alt (while pressed)</description>
         </configItem>

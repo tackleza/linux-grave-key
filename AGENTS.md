@@ -80,7 +80,9 @@ Wayland session can also export `DISPLAY` for XWayland, never check `DISPLAY`
 before `WAYLAND_DISPLAY`.
 
 Wayland installs are per-user under `$XDG_CONFIG_HOME/xkb` with the standard
-fallback to `$HOME/.config/xkb`, and must not use sudo. X11 installs are
+fallback to `$HOME/.config/xkb`, and must not use sudo. The installer also
+registers that directory through `$XDG_CONFIG_HOME/environment.d` so KDE
+Wayland/libxkbcommon searches it. X11 installs are
 system-wide under `/usr/share/X11/xkb`; when invoked as a regular user, the
 script must explicitly re-run itself with `sudo -- ... --x11`. The supported
 flags are `--auto`, `--wayland`, `--x11`, and `--help`.

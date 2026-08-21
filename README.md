@@ -12,7 +12,8 @@
 * ติดตั้งกฎ XKB และสัญลักษณ์สำหรับ `grp:grave_switch`
 * ตรวจจับ Wayland หรือ X11 ให้อัตโนมัติ
 * Wayland: ติดตั้งเฉพาะผู้ใช้ที่ `$XDG_CONFIG_HOME/xkb` หรือ
-  `~/.config/xkb` โดยไม่ต้องใช้ `sudo`
+  `~/.config/xkb` โดยไม่ต้องใช้ `sudo` และลงทะเบียน path ผ่าน
+  `~/.config/environment.d` สำหรับ KDE/libxkbcommon
 * X11: ติดตั้งทั้งระบบที่ `/usr/share/X11/xkb` และสคริปต์จะขอสิทธิ์
   `sudo` เมื่อจำเป็น
 * สามารถระบุโหมดเองด้วย `--wayland`, `--x11` หรือ `--auto`
@@ -99,7 +100,8 @@ grave/backquote key (`) to switch keyboard layouts on X11 or Wayland.
 * Installs the XKB rules and symbols for `grp:grave_switch`
 * Detects Wayland or X11 automatically
 * Wayland: installs for the current user in `$XDG_CONFIG_HOME/xkb`, falling
-  back to `~/.config/xkb`, without `sudo`
+  back to `~/.config/xkb`, without `sudo`, and registers that directory
+  through `~/.config/environment.d` for KDE/libxkbcommon
 * X11: installs system-wide in `/usr/share/X11/xkb` and requests `sudo` only
   when necessary
 * Supports explicit `--wayland`, `--x11`, and `--auto` modes
@@ -148,6 +150,11 @@ Installation complete. Log out and back in, or reboot, to apply it.
 ```
 
 The username and target directory will differ between systems.
+
+On Wayland, the installer writes
+`~/.config/environment.d/linux-grave-key.conf` with
+`XKB_CONFIG_EXTRA_PATH` pointing at the per-user XKB directory. KDE Wayland
+does not automatically search `~/.config/xkb`.
 
 ## Usage
 

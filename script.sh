@@ -91,6 +91,8 @@ if [[ "$mode" == "wayland" ]]; then
   [[ "$config_home" == /* ]] || fail "XDG_CONFIG_HOME must be an absolute path."
 
   xkb_root="$config_home/xkb"
+  environment_dir="$config_home/environment.d"
+  environment_file="$environment_dir/linux-grave-key.conf"
   echo "Installing Wayland configuration for user: ${USER:-$(id -un)}"
 else
   if (( EUID != 0 )); then
@@ -115,5 +117,14 @@ cp -f -- "$script_dir"/rules/* "$rules_dir/"
 
 echo "Copying symbols..."
 cp -f -- "$script_dir"/symbols/* "$symbols_dir/"
+
+if [[ "$mode" == "wayland" ]]; then
+  # libxkbcommon does not automatically search ~/.config/xkb. Register the
+  # per-user tree with the compositor's login environment so KDE Wayland can
+  # resolve the custom rules and symbols before it creates the keymap.
+  mkdir -p -- "$environment_dir"
+  printf 'XKB_CONFIG_EXTRA_PATH=%s\n' "$xkb_root" > "$environment_file"
+  echo "Registered XKB path in: $environment_file"
+fi
 
 echo "Installation complete. Log out and back in, or reboot, to apply it."

@@ -7,14 +7,7 @@ xkb_symbols "switch" {
 // Pressing the grave key switches to the next group.
 partial modifier_keys
 xkb_symbols "grave_switch" {
-    virtual_modifiers AltGr;
-    key <TLDE> {
-        symbols[Group1] = [ ISO_Next_Group ],
-        symbols[Group2] = [ ISO_Prev_Group ],
-        symbols[Group3] = [ ISO_Next_Group ],
-        symbols[Group4] = [ ISO_Next_Group ],
-        virtualMods = AltGr
-    };
+    key <TLDE> { [ ISO_Next_Group ] };
 };
 
 // The left Alt key (while pressed) chooses the next group.
